@@ -17,19 +17,7 @@ A simplified browser-based Monopoly game built with modular JavaScript and funct
 - **HTML/CSS** – structure and styling  
 - **JSDoc** – code documentation  
 - **Functional Programming** – using [Ramda](https://ramdajs.com/) for utility logic  
-- **Mocha** – unit testing (if implemented)
-
-## 📂 Project Structure
-
-```
-├── Monopoly.js            # Core game logic module
-├── popup.js               # Reusable popup interface module
-├── main.js                # DOMContentLoaded setup & UI binding
-├── index.html             # Main game UI
-├── style.css              # Styling (optional)
-├── assets/                # Dice images, property cards, player tokens
-└── README.md              # Project documentation
-```
+- **Mocha** – unit testing
 
 ## 🚀 Getting Started
 
