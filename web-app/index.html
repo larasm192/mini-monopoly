@@ -1,0 +1,358 @@
+<!-- In HTML Comments are written like this -->
+<!-- They can all be removed for your apps -->
+<!doctype html> <!-- This first line tells browsers to expect modern standard html 5 -->
+<html lang="en-gb"> <!-- This is indicates the page is written in British English, useful for accessibility -->
+<meta charset="utf-8"> <!-- This indicates how the file is encoded. utf-8 is standard -->
+<title>Mini Monopoly</title> <!-- All pages need a title, this will be displayed in the browser's title bar -->
+<link rel="stylesheet" href="default.css"> <!-- Import style sheet – default.css -->
+<link rel="icon" href="./assets/favicon.png"> <!-- Import 'Favorites Icon' – favicon.png -->
+<script type="module" src="main.js"></script> <!-- Load the main script. Must be type="module". Have only one of these -->
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inder&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+
+<header>
+    <h1>Mini Monopoly</h1> <!-- This is the main title of the page. It is important for accessibility and SEO -->
+</header>
+
+
+<aside id="player_1_aside" class="player-aside">
+  <div class="player-aside-section">
+    <h3>Player 1 🎩</h3>
+    <span id="player1_money"> </span>
+  </div>
+  <div class="player-aside-section">
+    <h3>Properties</h3>
+    <div id="player1_properties" class="properties-container"></div>
+  </div>
+</aside>
+
+<aside id="player_2_aside" class="player-aside">
+  <div class="player-aside-section">
+    <h3>Player 2 🚗</h3>
+    <span id="player2_money"> </span>
+  </div>
+  <div class="player-aside-section">
+    <h3>Properties</h3>
+    <div id="player2_properties" class="properties-container"></div>
+  </div>
+</aside>
+
+
+<main>
+    <div class="game_board_container">
+        <table>
+            <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+            </colgroup>
+            <tr>
+                <td class="corner" id="corner-top-left" square="11">
+                    <div class="corner-text">
+                        <div> FREE </div>
+                        <div> PARKING </div>
+                    </div>
+                    <div class="player-tokens"></div>
+                </td>
+                <td class="property top" id="red" square="12">
+                    <div class="colour-bar">
+                        <div class="player-tokens"></div>
+                    </div>
+                    <div class="content-container">
+                        <div class="property-content">
+                            <div class="property-name">ALDA <br> AVENUE</div>
+                            <div class="image-container">
+                                <img src="./assets/alda.jpg" alt="Alda" class="logo">
+                            </div>
+                            <div class="property-price">Ł140</div>
+                        </div>
+                    </div>
+                </td>
+                <td class="property top" id="red" square="13">
+                    <div class="colour-bar">
+                        <div class="player-tokens"></div>
+                    </div>
+                    <div class="content-container">
+                        <div class="property-content">
+                            <div class="property-name">SYDNEY <br> SKYLAND</div>
+                            <div class="image-container">
+                                <img src="./assets/sydney.jpg" alt="Sydney" class="logo">
+                            </div>
+                            <div class="property-price">Ł140</div>
+                        </div>
+                    </div>
+                </td>
+                <td class="property top" id="yellow" square="14">
+                    <div class="colour-bar">
+                        <div class="player-tokens"></div>
+                    </div>
+                    <div class="content-container">
+                        <div class="property-content">
+                            <div class="property-name">JESSICA <br> JETTY</div>
+                            <div class="image-container">
+                                <img src="./assets/jessica.jpg" alt="Jessica" class="logo">
+                            </div>
+                            <div class="property-price">Ł160</div>
+                        </div>
+                    </div>
+                </td>
+                <td class="property top" id="yellow" square="15">
+                    <div class="colour-bar">
+                        <div class="player-tokens"></div>
+                    </div>
+                    <div class="content-container">
+                        <div class="property-content">
+                            <div class="property-name">AMELIA <br> ALLEY</div>
+                            <div class="image-container">
+                                <img src="./assets/amelia-1.jpg" alt="Amelia" class="logo">
+                            </div>
+                            <div class="property-price">Ł160</div>
+                        </div>
+                    </div>
+                </td>
+                <td class="corner" id="corner-top-right" square="16">
+                    <div class="corner-text">
+                        <div> GO TO </div>
+                        <div> JAIL </div>
+                    </div>
+                    <div class="player-tokens"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="property left" id="orange" square="10">
+                    <div class="colour-bar">
+                        <div class="player-tokens"></div>
+                    </div>
+                    <div class="content-container">
+                        <div class="property-content">
+                            <div class="property-name">KIARA <br> KINGDOM</div>
+                            <div class="image-container">
+                                <img src="./assets/kiara.jpeg" alt="Kiara" class="logo">
+                            </div>
+                        <div class="property-price">Ł120</div>
+                        </div>
+                    </div>
+                </td>
+                <td class="centre" rowspan="4" colspan="4"> 
+                    <div class="centre-text"> MINI MONOPOLY </div>
+                </td>
+                <td class="property right" id="green" square="17">
+                    <div class="colour-bar">
+                        <div class="player-tokens"></div>
+                    </div>
+                    <div class="content-container">
+                        <div class="property-content">
+                            <div class="property-name">VASCO <br> VILLAGE</div>
+                            <div class="image-container">
+                                <img src="./assets/vasco-1.jpg" alt="Vasco" class="logo">
+                            </div>
+                        <div class="property-price">Ł180</div>
+                        </div>
+                    </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="property left" id="orange" square="9">
+                    <div class="colour-bar">
+                        <div class="player-tokens"></div>
+                    </div>
+                    <div class="content-container">
+                        <div class="property-content">
+                            <div class="property-name">RYAAN <br> RESTAURANT</div>
+                            <div class="image-container">
+                                <img src="./assets/ryaan.jpg" alt="Ryaan" class="logo">
+                            </div>
+                        <div class="property-price">Ł120</div>
+                        </div>
+                    </div>
+                </td>
+                <td class="property side right" id="green" square="18">
+                    <div class="colour-bar">
+                        <div class="player-tokens"></div>
+                    </div>
+                    <div class="content-container">
+                        <div class="property-content">
+                            <div class="property-name">DEVANSH <br> DISTRICT</div>
+                            <div class="image-container">
+                                <img src="./assets/devansh-1.jpg" alt="Devansh" class="logo">
+                            </div>
+                        <div class="property-price">Ł180</div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="property left" id="pink" square="8">
+                    <div class="colour-bar">
+                        <div class="player-tokens"></div>
+                    </div>
+                    <div class="content-container">
+                        <div class="property-content">
+                            <div class="property-name">AMANDA ACADEMY</div>
+                            <div class="image-container">
+                                <img src="./assets/amanda.jpg" alt="Amanda" class="logo">
+                            </div>
+                        <div class="property-price">Ł100</div>
+                        </div>
+                    </div>
+                </td>
+                <td class="property right" id="dark-blue" square="19">
+                    <div class="colour-bar">
+                        <div class="player-tokens"></div>
+                    </div>
+                    <div class="content-container">
+                        <div class="property-content">
+                            <div class="property-name">CASPER <br> COVE</div>
+                            <div class="image-container">
+                                <img src="./assets/casper.jpg" alt="Casper" class="logo">
+                            </div>
+                        <div class="property-price">Ł200</div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <!-- 5TH ROW -->
+            <tr>
+                <td class="property left" id="pink" square="7">
+                    <div class="colour-bar">
+                        <div class="player-tokens"></div>
+                    </div>
+                    <div class="content-container">
+                        <div class="property-content">
+                            <div class="property-name">FLORENCE FALLS</div>
+                            <div class="image-container">
+                                <img src="./assets/florence-2.jpg" alt="Florence" class="logo">
+                            </div>
+                        <div class="property-price">Ł100</div>
+                        </div>
+                    </div>
+                </td>
+                <td class="property right" id="dark-blue" square="20">
+                    <div class="colour-bar">
+                        <div class="player-tokens"></div>
+                    </div>
+                    <div class="content-container">
+                        <div class="property-content">
+                            <div class="property-name">GUCCI <br> GARDENS</div>
+                            <div class="image-container">
+                                <img src="./assets/gucci.jpg" alt="Gucci" class="logo">
+                            </div>
+                        <div class="property-price">Ł200</div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <!-- BOTTOM ROW -->
+            <tr>
+                <td class="corner" id="corner-bottom-left" square="6">
+                    <div class="player-tokens"></div>
+                    <div class="jail-text">
+                        <div id="JUST"> JUST</div>
+                        <div id="VISITING"> VISITING</div>
+                    </div>
+                    <div class="jail-container"> </div>
+                </td>
+                <td class="property bottom" id="light-blue" square="5">
+                    <div class="colour-bar">
+                        <div class="player-tokens"></div>
+                    </div>
+                    <div class="content-container">
+                        <div class="property-content">
+                            <div class="property-name">JINGQI JUNCTION</div>
+                            <div class="image-container">
+                                <img src="./assets/jingqi.jpg" alt="Jingqi" class="logo">
+                            </div>
+                            <div class="property-price">Ł60</div>
+                        </div>
+                    </div>
+                </td>
+                <td class="property bottom" id="light-blue" square="4">
+                    <div class="colour-bar">
+                        <div class="player-tokens"></div>
+                    </div>
+                    <div class="content-container">
+                        <div class="property-content">
+                            <div class="property-name">TINKA <br>TOWN</div>
+                            <div class="image-container">
+                                <img src="./assets/tinka.jpg" alt="Tinka" class="logo">
+                            </div>
+                            <div class="property-price">Ł60</div>
+                        </div>
+                    </div>
+                </td>
+                <td class="property bottom" id="brown" square="3">
+                    <div class="colour-bar">
+                        <div class="player-tokens"></div>
+                    </div>
+                    <div class="content-container">
+                        <div class="property-content">
+                            <div class="property-name">SUNNY <br> SQUARE</div>
+                            <div class="image-container">
+                                <img src="./assets/sunny.jpg" alt="Sunny" class="logo">
+                            </div>
+                            <div class="property-price">Ł60</div>
+                        </div>
+                    </div>
+                </td>
+                <td class="property bottom" id="brown" square="2">
+                    <div class="colour-bar"> 
+                         <div class="player-tokens"></div>
+                    </div>
+                    <div class="content-container">
+                        <div class="property-content">
+                            <div class="property-name">LARA <br> LAND</div>
+                            <div class="image-container">
+                                <img src="./assets/lara-2.jpg" alt="Lara" class="logo">
+                            </div>
+                            <div class="property-price">Ł60</div>
+                        </div>
+                    </div>
+                </td>
+                <td class="corner" id="corner-bottom-right" square="1">
+                    <div class="corner-text">
+                        <div id="collect"> COLLECT</div>
+                        <div id="collect"> AS YOU</div>
+                        <div id="collect"> PASS</div>
+                        <div id="go"><strong>GO</strong></div>
+                    </div>
+                    <div class="player-tokens"></div>
+                    <img id="arrow" src="./assets/Arrow 1.png" alt="Red arrow" class="logo">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="player1" class="player-piece-container">
+        <div class="player-piece">🎩</div>
+    </div>
+    <div id="player2" class="player-piece-container">
+        <div class="player-piece">🚗</div>
+    </div>
+
+    <div class="dice-container">
+        <img id="dice-image" src="./assets/dice-1.png" alt="Dice" width="100">
+        <button id="roll-button">Roll Dice</button>
+    </div>
+
+</main>
+
+<body>
+    <div id="popup" class="popup hidden">
+  <div class="popup-content">
+    <p id="popup-message"></p>
+    <div class="popup-buttons">
+      <button id="popup-yes">Yes</button>
+      <button id="popup-no">No</button>
+      <button id="popup-close">Close</button>
+    </div>
+  </div>
+</div>
+</body>
+
