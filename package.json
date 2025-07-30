@@ -6,6 +6,9 @@
   "main": "web-app/Module.js",
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "devDependencies": {
     "docdash": "^2.0.2",
     "mocha": "^11.1.0",
