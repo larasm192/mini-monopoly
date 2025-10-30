@@ -21,11 +21,10 @@ A simplified browser-based Monopoly game built with modular JavaScript and funct
 
 ## 🚀 Getting Started
 
-1. Clone or download the repository  
-2. Open `index.html` in your browser  
-3. Click "Roll" to begin playing
-
-> ✅ No installation or server setup required – this is a front-end-only project.
+1. Clone or download the repository
+2. Run `npm install` into the terminal
+3. Then run `npm run dev`
+4. Click "Roll" to begin playing
 
 ## 🧠 Key Learning Outcomes
 
